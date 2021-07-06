@@ -25,4 +25,7 @@ pipeline {
     }
 
   }
+  environment {
+    Maven = '/opt/maven'
+  }
 }
