@@ -13,7 +13,7 @@ pipeline {
           steps {
             echo 'Print Test'
             sh 'mvn clean test'
-            publishCoverage()
+            publishCoverage(calculateDiffForChangeRequests: true, failBuildIfCoverageDecreasedInChangeRequest: true, failNoReports: true, failUnhealthy: true, failUnstable: true, applyThresholdRecursively: true)
           }
         }
 
