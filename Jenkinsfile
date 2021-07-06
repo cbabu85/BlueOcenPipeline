@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('Build') {
           steps {
-            sh 'mvn clean install -Dlicense.skip=true'
+            sh '"./mvnw clean install -DskipTests"'
           }
         }
 
