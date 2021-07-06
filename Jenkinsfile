@@ -26,6 +26,6 @@ pipeline {
 
   }
   environment {
-    Maven = '/opt/maven'
+    Maven = 'opt/maven'
   }
 }
