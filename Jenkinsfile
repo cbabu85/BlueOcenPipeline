@@ -1,9 +1,6 @@
 pipeline {
   agent any
-  tools {
-      maven 'MAVEN_HOME'
-  }
-  stages {
+    stages {
     stage('Build') {
       parallel {
         stage('Build') {
@@ -11,7 +8,7 @@ pipeline {
             sh 'mvn clean package'
           }
         }
-
+       
         stage('Test') {
           steps {
             echo 'Print Test'
