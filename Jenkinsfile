@@ -5,7 +5,7 @@ pipeline {
       parallel {
         stage('Build') {
           steps {
-            build 'pom.xml'
+            sh 'mvn clean install -Dlicense.skip=true'
           }
         }
 
@@ -15,6 +15,12 @@ pipeline {
           }
         }
 
+      }
+    }
+
+    stage('Deploy') {
+      steps {
+        echo 'Print Deploy'
       }
     }
 
