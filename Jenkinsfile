@@ -13,6 +13,7 @@ pipeline {
           steps {
             echo 'Print Test'
             sh 'mvn clean test'
+            publishCoverage()
           }
         }
 
